@@ -15,6 +15,7 @@ function App() {
       <h1>Pomodoro Focus</h1>
       <Timer onComplete={handleSessionComplete} />
       <Stats sessions={sessions} />
+      <img src='coffee_image.png'></img>
     </div>
   );
 }

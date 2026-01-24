@@ -21,6 +21,15 @@ body {
   text-align: center;
   width: 100%;
   max-width: 1000px;
+  position: relative;
+}
+
+img {
+  position: absolute;
+  opacity: 0.9;
+  width: 100px;
+  top: 160px;
+  right: 16px;
 }
 
 /* TITLE */
