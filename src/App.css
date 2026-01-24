@@ -106,3 +106,72 @@ button:active {
   font-size: 24px;
   opacity: 0.85;
 }
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 750px) {
+
+  body {
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .App {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  /* TITLE */
+  .App h1 {
+    font-size: 36px;
+  }
+
+  .App h1::after {
+    width: 220px;
+    margin-bottom: 20px;
+  }
+
+  /* IMAGE UNDER LINE */
+  img {
+    position: static;
+    display: block;
+    margin: 10px auto 24px;
+    width: 60px;
+    opacity: 0.9;
+  }
+
+  /* TIMER INFO (FOCUS / BREAK TEXT) */
+  .timer-info {
+    font-size: 18px;
+  }
+
+  /* TIMER – TWO ROWS */
+  .timer {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    word-break: break-word;
+  }
+
+  /* BUTTONS STACKED */
+  .controls {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 280px;
+    height: 54px;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  /* STATS */
+  .stats {
+    font-size: 16px;
+    text-align: center;
+  }
+}
