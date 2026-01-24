@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './App.css'
+
 
 function Timer({ onComplete }) {
   const [timeLeft, setTimeLeft] = useState(25 * 60);
@@ -35,10 +37,14 @@ function Timer({ onComplete }) {
 
   return (
     <div>
-      <h2>{isBreak ? 'Break' : 'Focus'}: {formatTime(timeLeft)}</h2>
-      <button onClick={() => setIsRunning(true)}>Start</button>
-      <button onClick={() => setIsRunning(false)}>Pause</button>
-      <button onClick={() => {setIsRunning(false); setTimeLeft(isBreak?5*60:25*60)}}>Reset</button>
+      <h2 className='timer-info'>{isBreak ? 'Break' : 'Focus'}: </h2>
+      <h2 className='timer'>{formatTime(timeLeft)}</h2>
+      <div className='controls'>
+        <button onClick={() => setIsRunning(true)}>Start</button>
+        <button onClick={() => setIsRunning(false)}>Pause</button>
+        <button onClick={() => {setIsRunning(false); setTimeLeft(isBreak?5*60:25*60)}}>Reset</button>
+      </div>
+      
     </div>
   );
 }

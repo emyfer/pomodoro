@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Timer from './Timer';
 import Stats from './Stats';
+import './App.css';
 
 function App() {
   const [sessions, setSessions] = useState(0);

@@ -1,9 +1,11 @@
 import React from 'react';
+import './App.css'
+
 
 function Stats({ sessions }) {
   return (
-    <div>
-      <h3>Pomodoro sessions completed: {sessions}</h3>
+    <div className='stats'>
+      <p>Pomodoro sessions completed: <span style={{fontWeight: "bold"}}>{sessions}</span></p>
     </div>
   );
 }
