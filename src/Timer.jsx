@@ -24,7 +24,6 @@ function Timer({ onComplete }) {
       setIsBreak(!isBreak);
       setTimeLeft(isBreak ? 25*60 : 5*60);
 
-      // Notification fallback
       if ('Notification' in window && Notification.permission === 'granted') {
         new Notification('Pomodoro', { body: isBreak ? 'Break over!' : 'Focus session over!' });
       } else {
