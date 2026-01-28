@@ -12,3 +12,14 @@ self.addEventListener('fetch', e => {
     caches.match(e.request).then(response => response || fetch(e.request))
   );
 });
+
+
+self.addEventListener("sync", event => {
+  if (event.tag === "pomodoro-finished") {
+    event.waitUntil(
+      self.registration.showNotification("Pomodoro", {
+        body: "Time for a break!"
+      })
+    );
+  }
+});
